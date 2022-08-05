@@ -1,14 +1,12 @@
 package lecom.desafio.controller;
 
 import lecom.desafio.model.Catalog;
-import lecom.desafio.repository.CatalogRepository;
 import lecom.desafio.service.CatalogService;
 
 import java.util.List;
 
 import org.apache.logging.log4j.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,21 +21,8 @@ public class CatalogController {
 	@Autowired
 	private CatalogService catalogService;
 	
-	@Autowired
-	private CatalogRepository catalogRepository;
-	
 	@GetMapping
-	public List<Catalog> GetAll() {
-		
-		return catalogRepository.findAll();
-		
-		//return ResponseEntity.ok(catalogService.find());
-				
+	public List<Catalog> GetAll() {		
+		return catalogService.findAll();				
 	}
-	
-	
-	
-	
-	
-
 }
