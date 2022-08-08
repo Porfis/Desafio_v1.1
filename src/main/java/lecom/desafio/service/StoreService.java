@@ -59,7 +59,8 @@ public class StoreService {
 		Carrier carrier = new Carrier();
 		carrier.setIdVenda(id);
 		carrier.setDeliveryAddress(deliveryAddress);
-		carrier.setSenderAddress(senderAddress);				
+		carrier.setSenderAddress(senderAddress);	
+		carrier.setRasterCode(id+1000);
 		String uri = "http://localhost:8080/api-store/carrier";
 		RestTemplate restTemplate = new RestTemplate();
 		restTemplate.postForObject(uri, carrier, carrier.getClass());

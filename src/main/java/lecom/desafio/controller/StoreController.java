@@ -6,7 +6,6 @@ import lecom.desafio.service.StoreService;
 
 import java.util.List;
 
-import org.apache.logging.log4j.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,9 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api-store/store")
 public class StoreController {
-	
-	private static final Logger logger = LogManager.getLogger(StoreController.class.getName());	
-	
 	@Autowired
 	private StoreService storeService;
 	

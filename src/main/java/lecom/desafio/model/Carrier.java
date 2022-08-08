@@ -32,10 +32,9 @@ public class Carrier {
 	
 	@Column(name = "enderecodestinatario")
 	private String deliveryAddress;
-	
-	@GeneratedValue(strategy = GenerationType.AUTO)
+		
 	@Column(name = "codigorastreio")
-	private int rasterCode;
+	private long rasterCode;
 	private String status;
 	
 	public Carrier() {

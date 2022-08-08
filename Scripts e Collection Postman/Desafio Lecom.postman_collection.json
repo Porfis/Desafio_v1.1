@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "509b1420-8867-4528-a34e-a7beed82e383",
+		"name": "Desafio Lecom",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Lojas",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Lojas Vendas",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Lojas Catálogo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api-store/store/catalog",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api-store",
+						"store",
+						"catalog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lojas Vendas",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n         \"id\": 85,   \r\n         \"deliveryAddress\": \"Rua Aqui da minha casa ó!\",\r\n         \"itemSale\": [\r\n            {\r\n                \"id\": 86,    \r\n                \"saleItem\": 85,\r\n                \"numItem\": 1,\r\n                \"product\": 1,\r\n                \"quantity\": 1,\r\n                \"subtotal\": 149.9\r\n            },\r\n            {   \r\n                \"id\": 87,    \r\n                \"saleItem\": 85,\r\n                \"numItem\": 2,\r\n                \"product\": 2,\r\n                \"quantity\": 1,\r\n                \"subtotal\": 5.19\r\n            }\r\n        ]\r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api-store/store/sale",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api-store",
+						"store",
+						"sale"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Catálogo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api-store/getcatalog",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api-store",
+						"getcatalog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transportadora",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Transportadora Entrega",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Transportadora",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\t    \r\n    \"senderAddress\":\"Rua Antonio, nº 20 - Bauru/SP\",\r\n    \"deliveryAddress\":\"Rua José Maria, nº 31 - Marília/SP\",\r\n    \"rasterCode\":\"124587\",\r\n    \"status\":\"Em aprovação\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api-store/carrier",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api-store",
+						"carrier"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

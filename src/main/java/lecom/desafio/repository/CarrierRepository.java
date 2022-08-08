@@ -9,6 +9,6 @@ import lecom.desafio.model.Carrier;
 
 public interface CarrierRepository extends JpaRepository<Carrier, Long> {
 	
-	public Optional<Carrier> findByRasterCode(@Param("rasterCode") int rasterCode);
+	public Optional<Carrier> findByRasterCode(@Param("rasterCode") long rasterCode);
 
 }

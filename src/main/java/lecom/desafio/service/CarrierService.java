@@ -25,7 +25,7 @@ public class CarrierService{
 		return carrierRepository.save(carrier);
 	}
 	
-	public ResponseEntity<Carrier> findByRasterCode(int rasterCode){
+	public ResponseEntity<Carrier> findByRasterCode(long rasterCode){
 		Optional<Carrier> carrier = carrierRepository.findByRasterCode(rasterCode);
 		if (carrier.isPresent()) 
 			return new ResponseEntity<Carrier>(carrier.get(), HttpStatus.OK);
